@@ -35,9 +35,12 @@
                 ?>
             </select>
         </div>
-        <div class="addB">
-            <input autocomplete="off" type="submit" value="add" id="AddUserButton" onclick="modal()">
-        </div>
+        <?php if ($_SESSION["name_role"] != "admin") : ?>
+            <div class="addB">
+                <input autocomplete="off" type="submit" value="add" id="AddUserButton" onclick="modal()">
+            </div>
+        <?php endif; ?>
+
     </div>
 
     <section class="wrapper">
